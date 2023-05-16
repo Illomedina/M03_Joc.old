@@ -1,3 +1,4 @@
+package HISTORIC.M03_Joc;
 public class ParaulaJoc {
  //Atributs de la classe
  private String paraulaCatala;

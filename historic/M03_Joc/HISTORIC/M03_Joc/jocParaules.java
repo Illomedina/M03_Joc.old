@@ -1,3 +1,4 @@
+package HISTORIC.M03_Joc;
 import java.util.Scanner;
 
 public class jocParaules {
