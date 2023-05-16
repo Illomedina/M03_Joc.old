@@ -11,13 +11,12 @@ public class lecturaFitxers{
         { 
             for(int i = 0; i < llistaObjectes.length && sc.hasNext(); i++){
             //Mentre hague una linea
-            while(sc.hasNext()){
                 stringValors = sc.nextLine();
-                //Cada vegada que trobe un string ane a crear un objecte i guardarlo en l'array de Objectes
+                System.out.println(stringValors);
+                //Cada vegada que trobe un string anem a crear un objecte i guardarlo en l'array de Objectes
                 llistaObjectes[i] = new ParaulaJoc(stringValors);
-
             }
-            }
+             
         }catch (IOException e) {
             e.printStackTrace();
         }
@@ -25,11 +24,6 @@ public class lecturaFitxers{
   
     return llistaObjectes;
     }
-
-
-
-
-
 
   public static void main(String[] args) {
     ParaulaJoc [] llistaParaules = new ParaulaJoc [10];
