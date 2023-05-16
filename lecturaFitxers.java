@@ -2,23 +2,44 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+
 public class lecturaFitxers{
-    public void llegirFitxer(String document){
-        File paraules_joc = new File("/home/super/Escritorio/historic/paraules-partides.txt");
-        //Mentre hague una linea
-        String linea;
+    public static ParaulaJoc [] llegirFitxer(String fitxer, ParaulaJoc [] llistaObjectes){
+         String stringValors;
+        File paraules_joc = new File(fitxer);
         try (Scanner sc = new Scanner(paraules_joc, StandardCharsets.UTF_8))
-        {  
-            while(sc.hasNextLine()){
-                linea = sc.nextLine();
-                System.out.println(linea);
+        { 
+            for(int i = 0; i < llistaObjectes.length && sc.hasNext(); i++){
+            //Mentre hague una linea
+            while(sc.hasNext()){
+                stringValors = sc.nextLine();
+                //Cada vegada que trobe un string ane a crear un objecte i guardarlo en l'array de Objectes
+                llistaObjectes[i] = new ParaulaJoc(stringValors);
+
+            }
             }
         }catch (IOException e) {
             e.printStackTrace();
         }
          
   
-   
+    return llistaObjectes;
     }
 
-}
+
+
+
+
+
+  public static void main(String[] args) {
+    ParaulaJoc [] llistaParaules = new ParaulaJoc [10];
+
+    llistaParaules = lecturaFitxers.llegirFitxer("paraules-partides.txt", llistaParaules);
+    for(int i = 0; i < llistaParaules.length; i++){
+        System.out.println(llistaParaules[i].toString());
+
+    }
+  
+  
+  }
+  }
