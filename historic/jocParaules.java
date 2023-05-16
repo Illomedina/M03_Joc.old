@@ -1,5 +1,6 @@
-import java.util.Scanner;
+package historic.*;
 
+import java.util.Scanner;
 public class jocParaules {
   public static void main(String[] args) {
      //longitud del Array
@@ -7,7 +8,7 @@ public class jocParaules {
     //Declaración de la Arrray d'objectes
     paraulaJoc[] llistaparaules = new paraulaJoc[N]; 
         
-    //declarar scannerArray
+    //declarar scanner
     Scanner sc = new Scanner(System.in);
     int opcio; //variable que usaremos para elegir opciones en el programa.
     do{
