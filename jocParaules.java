@@ -7,7 +7,7 @@ public class jocParaules {
     //Declaración de la Arrray d'objectes
     paraulaJoc[] llistaparaules = new paraulaJoc[N]; 
         
-    //declarar scanner
+    //declarar scannerArray
     Scanner sc = new Scanner(System.in);
     int opcio; //variable que usaremos para elegir opciones en el programa.
     do{

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class jocParaules {
+public class juego {
   public static void main(String[] args) {
     //Indica el nombre de variables disponibles en el 
     int disponibles = 6;
